@@ -17,7 +17,7 @@ example.html
     <button class="right-button">&#8594;</button>
 </div>
 ```
-
+style.css
 ```css
 .slideshow {
   display: flex;
