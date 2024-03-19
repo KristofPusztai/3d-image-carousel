@@ -5,6 +5,7 @@ This repo was inspired by Lun Dev Code's animated card slider design shown in [t
 It is written in pure vanilla JavaScript and relies on CSS transformation animations, with the main change from Lun Dev Code's implementation being images loaded in dynamically (only the immediatley visible assets are loaded in to reduce bandwidth usage). Once the images are loaded in, they are arranged into a 3d "slideshow" style format as shown in the example gif below:
 
 ![example-gif](img/example.gif)
+
 *example from [davids-wallpainting.com](https://davidbuzasi-wallpainting.com/en/)*
 
 ## Usage
