@@ -2,7 +2,7 @@
 
 This repo was inspired by Lun Dev Code's animated card slider design shown in [this youtube video](https://www.youtube.com/watch?v=Xh-wIMqohD0&ab_channel=LunDev) with some changes to reduce bandwidth usage. 
 
-It is written in pure vanilla JavaScript and relies on CSS transformation animations, with the main change from Lun Dev Code's implementation being images loaded in dynamically (only the immediatley visible assets are loaded in to reduce bandwidth usage). Once the images are loaded in, they are arranged into a 3d "slideshow" style format as shown in the example gif below:
+It is written in pure vanilla JavaScript and relies on CSS transformation animations, with the main change from Lun Dev Code's implementation being images loaded in dynamically (only the immediatley visible and specified number of non-visible "side" assets are loaded in to reduce bandwidth usage). Once the images are loaded in, they are arranged into a 3d "slideshow" style format as shown in the example gif below:
 
 ![example-gif](img/example.gif)
 
@@ -60,15 +60,19 @@ style.css
 example.js
 ```javascript
 let slideshow_class = ".slideshow" // classname of slideshow element
+
 let images = ['path/to/img1', 'path/to/img2'] // array of pathes to each image
-let starting_image_index = 1; // starting image index
+
+let starting_image_index = 1; // starting image index based on image array defined above, i.e. in this case we will start at img2 since images[1] -> 'path/to/img2'
 
 // Initializing slideshow
 let slides = new Slideshow(
   images,
   starting_image_index,
   slideshow_class,
-  "alt-text"
+  "alt-text",
+  num_load = 3, // Number of images to load on the side
+  num_render = 1 // Number of images to display on the side
 );
 
 // Left button handler to change slide to the left
